@@ -1,0 +1,122 @@
+/* Blog Card container */
+.blog-cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Default card styling */
+.blog-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Scale card on hover */
+.blog-card:hover {
+  transform: scale(1.025); /* Slightly increase size on hover */
+}
+
+/* Colors for beautification */
+.blog-card .blog-card-title {
+  color: green; /* Heading color */
+}
+
+/* Left align username in normal view */
+.blog-card .blog-user {
+  color: blue; /* Username color */
+  text-align: left; /* Left align username */
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Blue likes button */
+.blog-card .like-btn {
+  background-color: white;
+  color: blue; /* Likes button in blue */
+  border: 1px solid blue;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.blog-card .like-btn:hover {
+  background-color: lightblue; /* Change background color on hover */
+  color: white;
+}
+
+/* Comment button styling */
+.blog-card .comment-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.blog-card .comment-btn:hover {
+  background-color: darkred;
+}
+
+/* Enlarged (fullscreen) card */
+.blog-card.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  transition: all 0.3s ease-in-out; /* Smooth transition for fullscreen */
+}
+
+/* Make sure the fullscreen card is not blurred */
+.blog-card.fullscreen {
+  filter: none;
+}
+
+/* Right align username when in fullscreen */
+.blog-card.fullscreen .blog-user {
+  text-align: right; /* Right align username when card is fullscreen */
+  color: blue; /* Keeping username color blue */
+}
+
+/* Back arrow for fullscreen mode */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: blue; /* Blue back arrow */
+}
+
+.back-arrow:hover {
+  color: darkblue;
+}
+
+/* Dimmed background for effect when fullscreen card is open */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* Dimmed background */
+  z-index: 9;
+}

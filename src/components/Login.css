@@ -1,0 +1,69 @@
+/* Styling the login page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* Light blue background */
+  }
+  
+  .login-header {
+    font-size: 2rem;
+    color: #006400; /* Dark green */
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-input {
+    width: 250px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #006400; /* Green border */
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    width: 150px;
+    padding: 10px;
+    background-color: #006400; /* Green background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #228b22; /* Light green on hover */
+  }
+  
+  .new-user-text {
+    margin-top: 20px;
+    color: #006400; /* Green text */
+    font-size: 1rem;
+  }
+  
+  .signup-button {
+    background-color: #1e90ff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .signup-button:hover {
+    background-color: #4682b4; /* Lighter blue on hover */
+  }
+  
